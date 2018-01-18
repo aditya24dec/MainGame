@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="GameMain.css">
+	<script type="text/javascript " src ="GameMain.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+
+	 	$(document).ready(function(){
+
+	 		$("#myModal").modal("show");
+	 	});
+
+	  function print() {
+
+	 	var email = localStorage.getItem('user');
+	 	//alert(email);
+	 }
+
+	 function quit()
+	 {
+	 	localStorage.clear();
+	 	window.location.href="http://localhost:8083/login"
+	 }
+</script>
+</head>
+<body id= >
+
+
+	<!--Block for upper content-->
+		<div class="container-fluid header">
+			<div class="row">
+				<div class="col-md-4">
+						<div class="Welcome">
+							<img src="http://localhost:8083/uploads/<%=userImage%>"  id="userImage">
+							<label>Welcome , </label><label id="userName">   <%=user%></label>
+						</div>
+				</div>
+
+				<div class="col-md-2 timer">
+					<div>
+						<label id="min">00</label><label id="dot">:</label><label id="sec">00</label>
+					</div>
+				</div>
+
+				<div class="col-md-4 text-center" align="right">
+						<div class="tripContainer">
+							<label>Number of trips:</label><label id ="trips">0</label>
+						</div>
+						
+				</div>
+				<div class="col-md-2 options">
+					<button class="btn btn-md btn-success" onclick="document.location.reload();">Restart <i class="glyphicon glyphicon-repeat"></i></button>
+					<button class="btn btn-md btn-danger" onclick="quit();">Quit <i class="glyphicon glyphicon-remove"></i></button>
+				</div>
+			</div>
+		</div>
+		<!--Upper conetnt bock ends-->
+
+
+		<!--lower content block starts-->
+		<div class="container lowerpart">
+			<div class="row">
+			<!---For the Source---->
+				<div class="col-md-4">
+					<div id="source">
+			
+							<img src="images/saint.png" width="100px" height="100px" id="s1" style="position: relative;" onclick="Main(this.id)" class="saint">
+							<img src="images/saint.png" width="100px" height="100px" id="s2" style="position: relative;" onclick="Main(this.id)" class="saint">
+							<img src="images/saint.png" width="100px" height="100px" id="s3" onclick="Main(this.id)" style="position: relative;" class="saint">
+
+							<img src="images/canni.png" width="100px" height="100px" id="c1" style="position: relative;" onclick="Main(this.id)" class="canni">
+							<img src="images/canni.png" width="100px" height="100px" id="c2" style="position: relative;" onclick="Main(this.id)" class="canni">
+							<img src="images/canni.png" width="100px" height="100px" id ="c3" onclick="Main(this.id)" style="position: relative;" class="canni">
+					</div>
+				</div>
+
+				<!--For the boat -->
+				<div class="col-md-4">
+					<div  id="boat1">
+						<img src="images/boat.svg" width="400px" height="200px" onclick="check()">
+					</div>
+				</div>
+
+				<!--For the destination-->
+				<div class="col-md-4">
+								<div id="dest">
+				
+								</div>
+				</div>
+				
+			</div>
+			
+		</div>
+
+
+<div class="modal" id="myModal" data-backdrop="static" data-keyboard="false">
+	<div class="modal-dialog">
+		<div class="modal-content text-center">
+			<div class="modal-header">
+				<h3>Leader Board</h3>
+			</div>
+			<div class="modal-body">
+			        <table class="table">
+							  <thead style="padding-left: 10px;" class="tHead">
+							    <tr>
+							      <th scope="col">Photo</th>
+							      <th scope="col">First Name</th>
+							      <th scope="col">Last Name</th>
+							      <th scope="col">Score</th>
+							    </tr>
+							  </thead>
+ 							    <tbody>
+								  <%leaders.forEach(function(users){%>
+								    <tr style="color: orange;margin-left: -10px">
+								      <td><img src="http://localhost:8083/uploads/<%=users.avatar%>" height="40px" width="40px"></td>
+								      <td><%=users.firstname %></td>
+								      <td><%=users.lastname %></td>
+								      <td><%=users.score %></td>
+								    </tr>
+								    <%})%>
+								</tbody>
+						</table>
+			</div>
+			<div class="modal-footer text-center">
+				<button class="btn btn-lg btn-warning" onclick="startTime()" data-dismiss="modal">Ready!!</button>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+</body>
+</html>

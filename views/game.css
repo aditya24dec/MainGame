@@ -1,0 +1,93 @@
+html,body
+{
+	
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-image: url("images/back.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+/*    //overflow: hidden;*/
+
+}
+#containerr
+{
+	background-image: url("images/back.gif");
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+	margin:0px;
+	display: block;
+	height: inherit;
+	width: inherit;
+    padding: 0px;
+    position: relative;
+}
+
+#source {
+    position: relative;
+    height: 200px;
+    width: 338px;
+    float: left;
+ 
+    margin-top: 280px;
+    z-index: 200;
+}
+#boat {
+    position: relative;
+    height: 200px;
+    width: 870px;
+    float: left;
+    margin-top: 340px;
+    margin-left: -150px;
+}
+#dest {
+    position: relative;
+    height: 200px;
+    width: 330px;
+    float: left;
+    margin-top: 266px;
+    margin-left: -104px;
+    z-index: 200;
+}
+#boat1
+{
+    position: relative;
+    display: inline-block;
+}
+
+#c1:hover ,#c2:hover ,#c3:hover ,#s1:hover ,#s2:hover,#s3:hover {
+
+    opacity: 0.8;
+}
+h4
+{
+    padding: 20px;
+}
+
+#min ,#sec ,#dot{
+
+
+    font-family:DS-Digital;
+    font-size: 80px;
+
+}
+.timer
+{
+    float: right;margin-right: 600px;
+}
+.tripContainer
+{
+    position: relative;
+    font-size: 40px;
+    float: right;margin-right: -700px;
+    margin-top: 10px;
+}
+.Welcome
+{
+    font-size: 30px;
+    font-weight: bold;
+
+}

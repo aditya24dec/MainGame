@@ -1,0 +1,59 @@
+html,body
+{
+	
+    height: 100%;
+    width: 100%
+	margin:0;
+    padding: 0;
+    overflow: hidden;
+
+}
+#container
+{
+	background-image: url("images/back.gif");
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+	margin:0;
+	display: block;
+	height: inherit;
+	width: inherit;
+    padding: 0;
+    position: relative;
+}
+
+#source {
+    position: relative;
+    height: 200px;
+    width: 338px;
+    float: left;
+ 
+    margin-top: 320px;
+    z-index: 200;
+}
+#boat {
+    position: relative;
+    height: 200px;
+    width: 870px;
+    float: left;
+    margin-top: 414px;
+    margin-left: -150px;
+}
+#dest {
+    position: relative;
+    height: 200px;
+    width: 330px;
+    float: left;
+    margin-top: 306px;
+    margin-left: -104px;
+    z-index: 200;
+}
+#boat1
+{
+    position: relative;
+    display: inline-block;
+}
+
+#c1:hover ,#c2:hover ,#c3:hover ,#s1:hover ,#s2:hover,#s3:hover {
+
+    opacity: 0.8;
+}

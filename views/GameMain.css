@@ -1,0 +1,118 @@
+body{
+
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-image: url("images/back.gif");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+	overflow: hidden;
+}
+
+.lowerpart{
+
+	margin-top: 360px;
+	/*margin-left: 150px;*/
+	position: relative;
+}
+#boat1{
+
+	margin-top: 20px;
+	position: relative;
+	margin-left: -280px;
+
+}
+#source {
+    position: relative;
+    height: 200px;
+    width: 338px;
+    float: left;
+    margin-left: -100px;
+ 
+    margin-top: -80px;
+    z-index: 200;
+}
+
+#dest {
+    position: relative;
+    height: 200px;
+    width: 330px;
+    float: left;
+    margin-top: -80px;
+    margin-left: 450px;
+    z-index: 200;
+}
+#min ,#sec ,#dot{
+
+
+    font-family:DS-Digital;
+    font-size: 80px;
+    color: orange;
+
+}
+.timer
+{
+       top: -30px;
+       color: #000000;
+   }
+.tripContainer
+{
+    font-family: GAMECUBEN;
+    position: relative;
+    font-size: 22px;
+    padding-top: 13px;
+    color: orange;
+}
+.Welcome
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: orange;
+    padding-top: 8px;
+    padding-left: 50px;
+
+}
+
+#userImage{
+
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+}
+
+.header
+{
+    height: 80px;
+/*    margin-bottom: -40px;*/
+    padding-top: 10px;
+    background-color: white;
+    border-bottom: 5px solid orange;
+    opacity: .8;
+}
+.options
+{
+    padding-top: 11px;
+}
+#myModal
+{
+    border-radius: 40%;
+}
+.modal-header{
+
+    /*background-color: orange;*/
+    font-family:  GAMECUBEN   ;
+    border-bottom:5px solid orange;
+    color:orange;
+    box-shadow:0 0 10px orange;
+}
+.table th{
+    text-align: center;
+}
+
+.tHead{
+
+    
+
+}

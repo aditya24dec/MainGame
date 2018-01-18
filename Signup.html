@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup Page</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="Signup.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+		  function print() {
+		  	alert("welcome to signup");
+	 	var email = localStorage.getItem('user');
+	 	alert(email);
+	 }
+</script>
+
+</head>
+<body class="container" onload="print()">
+<!-- <div class="row">
+	<div class="col-md-12" align="center">
+		<h1>Registration Form</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12" align="center" >
+		<div class="account-wall">
+			<form action="http:localhost:8083/signup" method="post" enctype="multipart/form-data">
+				<input type="text" name="firstname" required class="form-control" placeholder="FirstName" />
+				<input type="text" name="lastname" class="form-control" placeholder="LastName">
+				<input type="email" name="email" required class="form-control" placeholder="Email">
+				<input type="password" name="password" class="form-control" placeholder="Password">
+				<input type="password" name="confirmpass" class="form-control" placeholder="Confrim Password">
+				<input type="tel" name="mobile" required  maxlength="10"  pattern="[0-9]{10}" class="form-control" 
+				placeholder="Mobile Number">
+				<input type="text" name="gender" class="form-control" placeholder="Gender">
+				<input type="file" name="avatar" class="form-control" ><br>
+				<input type="submit" name="submit" class="btn-success" />
+				
+			</form>
+			<button class="btn-waring" onclick="window.location.href='login.html'">Login</button> 
+		</div>
+	</div>				
+</div> -->
+
+		 <div class="container">
+        <div class="card card-container text-center">
+        <h2 class='login_title text-center'>Registration</h2>
+        <hr>
+
+            <form action="http:localhost:8083/signup" method="post" enctype="multipart/form-data" class="form-signin">
+				<input type="text" name="firstname" required class="form-control" placeholder="FirstName" />
+				<input type="text" name="lastname" class="form-control" placeholder="LastName">
+				<input type="email" name="email" required class="form-control" placeholder="Email">
+				<input type="password" name="password" class="form-control" placeholder="Password">
+				<input type="password" name="confirmpass" class="form-control" placeholder="Confrim Password">
+				<input type="tel" name="mobile" required  maxlength="10"  pattern="[0-9]{10}" class="form-control" 
+				placeholder="Mobile Number">
+				<label>
+      		    <input type="radio" name="gender" value="Male" class="required" >Male</label>
+    			<label>
+      			  <input type="radio" name="gender" value="Female" class="required">Female</label>
+				<input type="file" name="avatar" class="form-control" >
+				</br><button class="btn btn-lg btn-primary" type="submit">SignUp</button>
+                <button class="btn btn-lg btn-primary" type="submit" onclick="window.location.href='login.html'">Login</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+	function gcall()
+	{
+		// window.location="http://localhost:8083/getBoard";
+	}
+</script>
+</head>
+<body onload="gcall()">
+
+	 <div class="container">
+        <div class="card card-container">
+        <h2 class='text-center'>LeaderBoard</h2>
+        <hr>
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Photo</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+  <%leaders.forEach(function(user){%>
+    <tr>
+      <td><img src="/images/canni.png" height="40px" width="40px"></td>
+      <td><%=user.firstname %></td>
+      <td><%=user.lastname %></td>
+      <td><%=user.score %></td>
+    </tr>
+    <%})%>
+  </tbody>
+</table>
+        </div>
+    </div>
+</body>
+</html>

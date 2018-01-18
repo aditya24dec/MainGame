@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		
+
+	function clearLocal()
+	{
+		localStorage.clear();
+	}
+
+		function SetEmail()
+		 {
+		 	//alert("method called");
+		 	var email= document.getElementById("email").value;
+		 	localStorage.setItem('user', email);
+		 	//console.log(localStorage.getItem('user'))
+		 	//alert(localStorage.getItem('user'));
+
+		 	
+		 }
+
+	</script>
+
+	<style type="text/css">
+		body{
+
+	height: 100%;
+	background-color: #555555;
+}
+	.form-control{
+		width: 300px;
+
+		margin-bottom: 20px;
+	}
+
+.form-control
+{
+	width: 300px;
+
+}
+
+.card-container.card {
+    max-width: 350px;
+    
+
+hr{
+
+	color: black;
+	width: 100%;
+}
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 1px 25px 30px;
+    padding-top: 30px;
+    margin: 0px auto 25px;
+    margin-top: 150px;
+    border-radius: 10px;
+
+}
+.form-control:focus{
+
+	border-color: orange;
+	box-shadow:0 0 10px orange;
+	
+}
+.btn
+{
+	color:white;
+	background-color: orange;
+	border-color: orange;//box-shadow:0 0 10px green;
+}
+	</style>
+
+</head>
+<body onload="clearLocal()">
+
+	 <div class="container">
+        <div class="card card-container">
+        <h2 class='login_title text-center'>Login</h2>
+        <hr>
+
+            <form action="/login" method="post" class="form-signin text-center " align="center">
+                <input type="text" class="form-control" id="email" name="email" class="login_box" placeholder="Email" required autofocus>
+                <input type="password" class="form-control" name="password" class="login_box" placeholder="******" required>
+
+                </br><button class="btn btn-lg btn-primary" type="submit" onclick="SetEmail()">Login</button>
+                <button class="btn btn-lg btn-primary" onclick="window.location='http://localhost:8083/signup'">SignUp</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
